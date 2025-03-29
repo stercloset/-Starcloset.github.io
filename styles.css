@@ -1,0 +1,69 @@
+/* 水色バー */
+.navbar {
+    background-color: #00aaff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* 画像ギャラリー */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.like-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.like-btn.clicked {
+    animation: heartExplosion 0.5s ease-out;
+}
+
+/* いいねのハートがはじける演出 */
+@keyframes heartExplosion {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
